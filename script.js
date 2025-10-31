@@ -5,7 +5,7 @@ function dispalysection1() {
   const section3 =document.getElementById("section3");
   aside.style.display = "none";
   section1.style.display = "none";
-  section2.style.display = "block";
+  section2.style.display = "flex";
   section3.style.display ="none"
 }
 const btns = document.querySelectorAll(".botton");
@@ -63,3 +63,9 @@ function btnsuivant() {
   const section3=document.getElementById("section3");
   section3.style.display="block"
 }
+function resetcnt(){
+  cntr=1;
+  btncntr.innerHTML="1"
+
+}
+
