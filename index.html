@@ -180,24 +180,40 @@
       </section>
       <section
         id="section2"
-        class="absolute hidden inset-0 flex items-center justify-center  min-h-screen bg-transparent"
+        class="flex hidden inset-0 items-center justify-center min-h-screen bg-transparent"
       >
         <div
           id="div"
           class="rounded-lg shadow-xl bg-gray-300 hover:scale-105 duration-300 ease-out p-6 w-[800px] h-auto text-center"
         ></div>
-        <div
-            class="relative inline-block bg-white gap-10"
+        <div class="relative inline-block bg-white gap-10">
+          <h3 class="">Nombre des Billet que vous voulez</h3>
+          <button class="rounded-full bg-blue-500 h-12 w-12" onclick="plus()">
+            +
+          </button>
+          <p id="counteur" class="btncntre flex justify-center">1</p>
+          <button class="rounded-full bg-blue-500 h-12 w-12" onclick="moin()">
+            -
+          </button>
+        </div>
+        <div class="absolute inset-x-24 bottom-24 flex gap-52">
+          <button
+            id="btn-precedent"
+            onclick="btnprecedent()"
+            class="rounded-lg font-semibold hover:scale-105 duration-400 bg-blue-400 text-white ease-out px-8 py-3"
+            type="button"
           >
-            <h3 class="">Nombre des Billet que vous voulez</h3>
-            <button class="rounded-full bg-blue-500 h-12 w-12" onclick="plus()">+</button>
-            <p id="counteur" class="btncntre flex justify-center ">1</p>
-            <button class="rounded-full bg-blue-500 h-12 w-12" onclick="moin()">-</button>
-          </div>
-          <div>
-            <button type="button"></button>
-            <button type="button"></button>
-          </div>
+            Precedent
+          </button>
+          <button
+            onclick="btnsuivant()"
+            id="btn-suivant"
+            class="rounded-lg font-semibold hover:scale-105 duration-400 bg-blue-400 text-white ease-out px-8 py-3"
+            type="button"
+          >
+            Suivant
+          </button>
+        </div>
       </section>
     </main>
     <footer class="relative bg-gray-300 h-24">

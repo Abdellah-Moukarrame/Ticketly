@@ -2,9 +2,11 @@ function dispalysection1() {
   const section1 = document.getElementById("section1");
   const aside = document.getElementById("aside");
   const section2 = document.getElementById("section2");
+  const section3 =document.getElementById("section3");
   aside.style.display = "none";
   section1.style.display = "none";
   section2.style.display = "block";
+  section3.style.display ="none"
 }
 const btns = document.querySelectorAll(".botton");
 let btncntr =document.getElementById("counteur");
@@ -48,3 +50,16 @@ btns.forEach((btn) => {
   });
 });
 
+function btnprecedent() {
+  const section2 = document.getElementById("section2");
+  section2.style.display="none";
+  const section1 = document.getElementById("section1");
+  section1.style.display="block";
+
+}
+function btnsuivant() {
+  const section2 = document.getElementById("section2");
+  section2.style.display="none";
+  const section3=document.getElementById("section3");
+  section3.style.display="block"
+}
