@@ -7,6 +7,18 @@ function dispalysection1() {
   section2.style.display = "block";
 }
 const btns = document.querySelectorAll(".botton");
+let btncntr =document.getElementById("counteur");
+let cntr=1;
+function plus() {
+    cntr++;
+    btncntr.innerHTML=cntr;
+}
+function moin() {
+    if(cntr>1){
+        cntr--;
+        btncntr.innerHTML=cntr;
+    }
+}
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const eventcard = e.currentTarget.closest(".card");
@@ -18,8 +30,8 @@ btns.forEach((btn) => {
       ),
       price: eventcard.querySelector("p").textContent,
     };
-    console.log(objetEvent);
     const div2 = document.querySelector("#div");
+
     div2.innerHTML = `<img src="${objetEvent.image}"/>
           <h3>${objetEvent.title}</h3>
           <ul>
@@ -31,6 +43,8 @@ btns.forEach((btn) => {
             onclick="dispalysection1()"
             type="button"
           ></button>
-          <p></p>`;
+          <p>${objetEvent.price}</p>
+          `;
   });
 });
+
