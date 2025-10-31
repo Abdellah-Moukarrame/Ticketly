@@ -199,7 +199,7 @@
         <div class="absolute inset-x-24 bottom-24 flex gap-52">
           <button
             id="btn-precedent"
-            onclick="btnprecedent() ;resetcnt()"
+            onclick="btnprecedent(); resetcnt()"
             class="rounded-lg font-semibold hover:scale-105 duration-400 bg-blue-400 text-white ease-out px-8 py-3"
             type="button"
           >
@@ -214,6 +214,19 @@
             Suivant
           </button>
         </div>
+      </section>
+      <section
+        id="section3"
+        class="flex justify-center items-center hidden size-32 bg-gray-300"
+      >
+        <form action="" class="absolute shadow-xl bg-white rounded-md">
+          <label for="">Nom:</label><br />
+          <input type="text" placeholder="Entrer Votre nom" required /><br />
+          <label for="">Prenom:</label><br />
+          <input type="text" placeholder="Entrer votre Prenom" required /><br />
+          <label for="">Email</label><br />
+          <input type="email" placeholder="Entrer votre email" required /><br />
+        </form>
       </section>
     </main>
     <footer class="relative bg-gray-300 h-24">
