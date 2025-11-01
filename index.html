@@ -117,7 +117,12 @@
         <div
           class="card relative rounded-lg shadow-xl bg-gray-300 hover:scale-105 duration-300 ease-out"
         >
-          <img class="" src="img/card4.png" alt="" srcset="" />
+          <img
+            class="h-32 w-96 object-fill"
+            src="img/card4.png"
+            alt=""
+            srcset=""
+          />
           <h3 class="relative w-fit text-lg text-black">
             Festival Gastronomique International
           </h3>
@@ -217,16 +222,53 @@
       </section>
       <section
         id="section3"
-        class="flex justify-center items-center hidden size-32 bg-gray-300"
+        class="hidden inset-0 flex justify-center items-center bg-white"
       >
-        <form action="" class="absolute shadow-xl bg-white rounded-md">
+        <form
+          action=""
+          class="form shadow-xl bg-gray-500 my-16 px-8 pt-6 pb-8 rounded-md"
+        >
           <label for="">Nom:</label><br />
-          <input type="text" placeholder="Entrer Votre nom" required /><br />
+          <input
+            type="text"
+            placeholder="Entrer votre nom"
+            required
+            class="nom-input border rounded w-full mb-3 px-2 py-1 focus-within:outline-2 focus-within:outline-blue-600"
+          /><br />
+
           <label for="">Prenom:</label><br />
-          <input type="text" placeholder="Entrer votre Prenom" required /><br />
-          <label for="">Email</label><br />
-          <input type="email" placeholder="Entrer votre email" required /><br />
+          <input
+            type="text"
+            placeholder="Entrer votre prénom"
+            required
+            class="prenom-input border rounded w-full mb-3 px-2 py-1 focus-within:outline-2 focus-within:outline-blue-600"
+          /><br />
+          <label for="">Tele:</label><br />
+          <input
+            type="tel"
+            placeholder="Entrer votre prénom"
+            required
+            class="tel-input border rounded w-full mb-3 px-2 py-1 focus-within:outline-2 focus-within:outline-blue-600"
+          /><br />
+
+          <label for="">Email:</label><br />
+          <input
+            type="email"
+            placeholder="Entrer votre email"
+            required
+            class="email-input border rounded w-full mb-3 px-2 py-1 focus-within:outline-2 focus-within:outline-blue-600"
+          /><br />
+
+          <input
+            type="submit"
+            value="Envoyer"
+            class="Envoyer bg-white text-black w-lg px-4 py-2 rounded hover:bg-blue-600 cursor-pointer"
+          />
         </form>
+        <div
+          id="dataextracteddiv"
+          class="rounded-lg bg-gray-400 text-center gap-8"
+        ></div>
       </section>
     </main>
     <footer class="relative bg-gray-300 h-24">
