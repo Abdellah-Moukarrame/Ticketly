@@ -14,7 +14,7 @@
         <img class="absolute w-24" src="/img/logo.png" alt="" srcset="" />
       </nav>
     </header>
-    <main class="flex-1 flex-row relative">
+    <main class="flex-1 h-[100vh] flex-row relative">
       <aside
         id="aside"
         class="absolute top-32 left-4 h-auto bg-gray-500 w-56 p-4 rounded-lg"
@@ -178,24 +178,41 @@
           <p class="absolute left-2 bottom-0">100£</p>
         </div>
       </section>
-      <section id="section2" class="absolute hidden">
+      <section
+        id="section2"
+        class="flex hidden inset-0 items-center justify-center min-h-screen bg-transparent"
+      >
         <div
           id="div"
-          class="relative rounded-lg shadow-xl bg-gray-300 hover:scale-105 duration-300 ease-out"
-        >
-          <!-- <img class="" src="" alt="" srcset="" />
-          <h3 class="relative w-fit text-lg text-black"></h3>
-          <ul class="list-decimal relative left-16 top-8">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          class="rounded-lg shadow-xl bg-gray-300 hover:scale-105 duration-300 ease-out p-6 w-[800px] h-auto text-center"
+        ></div>
+        <div class="relative inline-block bg-white gap-10">
+          <h3 class="">Nombre des Billet que vous voulez</h3>
+          <button class="rounded-full bg-blue-500 h-12 w-12" onclick="plus()">
+            +
+          </button>
+          <p id="counteur" class="btncntre flex justify-center">1</p>
+          <button class="rounded-full bg-blue-500 h-12 w-12" onclick="moin()">
+            -
+          </button>
+        </div>
+        <div class="absolute inset-x-24 bottom-24 flex gap-52">
           <button
-            onclick="dispalysection1()"
-            class="botton bg-blue-500 absolute right-4 bottom-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
+            id="btn-precedent"
+            onclick="btnprecedent() ;resetcnt()"
+            class="rounded-lg font-semibold hover:scale-105 duration-400 bg-blue-400 text-white ease-out px-8 py-3"
             type="button"
-          ></button>
-          <p class="absolute left-2 bottom-0"></p> -->
+          >
+            Precedent
+          </button>
+          <button
+            onclick="btnsuivant()"
+            id="btn-suivant"
+            class="rounded-lg font-semibold hover:scale-105 duration-400 bg-blue-400 text-white ease-out px-8 py-3"
+            type="button"
+          >
+            Suivant
+          </button>
         </div>
       </section>
     </main>
