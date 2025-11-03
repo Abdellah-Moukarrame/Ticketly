@@ -22,6 +22,7 @@ function moin() {
     btncntr.innerHTML = cntr;
   }
 }
+const div2 = document.querySelector("#div");
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const eventcard = e.currentTarget.closest(".card");
@@ -33,7 +34,6 @@ btns.forEach((btn) => {
       ),
       price: eventcard.querySelector("p").textContent,
     };
-    const div2 = document.querySelector("#div");
 
     div2.innerHTML = `<img class='rounded-md w-full h-40 object-cover' src="${objetEvent.image}"/>
           <h3>${objetEvent.title}</h3>
@@ -64,6 +64,8 @@ function resetcnt() {
   btncntr.innerHTML = "1";
 }
 let buttonform = document.querySelector(".form");
+let dataformdisplay = document.querySelector("#dataextracteddiv");
+
 let cntrparticipant = 0;
 buttonform.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -76,19 +78,19 @@ buttonform.addEventListener("submit", (e) => {
   const emailinput = document.querySelector(".email-input").value;
 
   if (!regex_nom_prenom.test(nominput)) {
-    return alert("le nom est invalide essayer une autre fois")
+    return alert("le nom est invalide essayer une autre fois");
   }
   if (!regex_nom_prenom.test(prenominput)) {
-   return alert("le prenom est invalide essayer une autre fois") ;
+    return alert("le prenom est invalide essayer une autre fois");
   }
   if (!regex_tel.test(telinput)) {
-   return alert("le numero est invalide essayer une autre fois");
+    return alert("le numero est invalide essayer une autre fois");
   }
   if (!regex_email.test(emailinput)) {
-   return alert("le email est invalide essayer une autre fois")
+    return alert("le email est invalide essayer une autre fois");
   }
   e.preventDefault();
-    if (cntrparticipant < cntr) {
+  if (cntrparticipant < cntr) {
     cntrparticipant++;
     let dataform = e.target.closest(".form");
     let objetformdata = {
@@ -97,7 +99,7 @@ buttonform.addEventListener("submit", (e) => {
       Telephone: dataform.querySelector(".tel-input").value,
       Email: dataform.querySelector(".email-input").value,
     };
-    let dataformdisplay = document.querySelector("#dataextracteddiv");
+
     dataformdisplay.innerHTML += `
           <div id='dataformdisplaydiv' class='rounded-lg bg-blue-400 text-center gap-8 my-5 '>
             <h1 class='font-mono text-black'>le participant:${cntrparticipant}/${cntr} </h1>
@@ -110,10 +112,9 @@ buttonform.addEventListener("submit", (e) => {
   } else {
     alert("max utilisateur ajouter ");
   }
-  
+
   e.preventDefault();
   buttonform.reset();
-  
 });
 function deleteuser(button) {
   button.parentElement.remove();
